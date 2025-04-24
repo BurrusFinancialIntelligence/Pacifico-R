@@ -17,9 +17,9 @@ install.packages("remotes")}
 # for private repo
 Sys.setenv(GITHUB_PAT = "your_github_token_here")
 
-devtools::install_github("username/repo")
+devtools::install_github("username/Pacifico-R")
 # or
-remotes::install_github("username/repo")
+remotes::install_github("username/Pacifico-R")
 ``` 
 
 ## Example
