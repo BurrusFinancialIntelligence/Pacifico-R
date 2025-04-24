@@ -4,22 +4,32 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of pacifico is to ...
+This repository holds the pacifico user R package for the API (client source code).
 
 ## Installation
 
 You can install the development version of pacifico like so:
+``` 
+install.packages("devtools")
+# or
+install.packages("remotes")}
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
+# for private repo
+Sys.setenv(GITHUB_PAT = "your_github_token_here")
+
+devtools::install_github("username/repo")
+# or
+remotes::install_github("username/repo")
+``` 
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
+This is a basic example of a request to the API:
+``` 
 library(pacifico)
-## basic example code
-```
+
+pacifico::request(token='', ticker="CLP@TPM")
+
+``` 
+
 
