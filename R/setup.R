@@ -7,7 +7,7 @@
 #' @keywords internal
 setup_pacifico_environment <- function() {
   condaenv_name <- "r-reticulate"
-
+  install_pacifico_environment()
   # Check if Miniconda exists
   if (!dir.exists(reticulate::miniconda_path())) {
     warning("Miniconda not found. Please run install_pacifico_environment() first.")
