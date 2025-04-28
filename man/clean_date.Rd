@@ -18,6 +18,9 @@ This function cleans a column of Python datetime objects (or strings)
 returned via \code{reticulate}, converting them to ISO format strings for R.
 }
 \examples{
+\dontrun{
 # Example with mixed data types:
 clean_date(c("2025-04-23 00:00:00", ""))
 }
+}
+\keyword{internal}

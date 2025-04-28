@@ -1,10 +1,21 @@
-Proprietary License
+# MIT License
 
-Copyright © 2025 Burrus Financial Intelligence, Ltda. (hereafter, BFI) Permission to include in application
-software or to make digital or hard copies of part or all of this work is subject to the following licensing
-agreement.
-BFI Software License Agreement: Any User wishing to make a commercial use of the Software must contact BFI
-at jacques.burrus@bfi.lat to arrange an appropriate license. Commercial use includes (1) integrating or incorporating
-all or part of the source code into a product for sale or license by, or on behalf of, User to third parties,
-or (2) distribution of the binary or source code to third parties for use with a commercial product sold or licensed
-by, or on behalf of, User.
+Copyright (c) 2025 Burrus Financial Intelligence Ltda.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

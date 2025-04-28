@@ -4,11 +4,11 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This repository holds the pacifico user R package for the API (client source code).
+The **`pacifico`** R package provides an interface to the **`Pacifico`** Python library, allowing users to request financial market data and handle date conversions seamlessly between R and Python. The package automates Python environment setup through **`reticulate`** and simplifies working with the **`Pacifico`** API (client source code) for economic research and analysis.
 
 ## Installation
 
-You can install the development version of pacifico like so:
+You can install the development version of **`pacifico`** like so:
 ``` 
 install.packages("devtools")
 # or
@@ -32,4 +32,19 @@ pacifico::request(token='', ticker="CLP@TPM")
 
 ``` 
 
+## Note
 
+The package requires a Python environment with the pacifico Python package installed.
+To set up this environment automatically, run:
+
+
+```
+library(pacifico)
+
+# This will:
+# - Install Miniconda if not already installed,
+# - Create the 'r-reticulate' environment if missing,
+# - Install the 'pacifico' Python package into that environment.
+install_pacifico_environment()
+
+```

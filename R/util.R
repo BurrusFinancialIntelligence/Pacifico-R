@@ -6,8 +6,11 @@
 #'
 #' @return A Python `datetime.date` object.
 #' @examples
+#' \dontrun{
+#' # Example of converting an R Date to Python datetime.date:
 #' to_py_date(as.Date("2025-04-23"))
-#' @export
+#' }
+#' @keywords internal
 to_py_date <- function(x) {
   datetime <- reticulate::import("datetime")
 
@@ -24,7 +27,6 @@ to_py_date <- function(x) {
   )
 }
 
-
 #' Clean Python datetime columns to R POSIXct
 #'
 #' This function cleans a column of Python datetime objects (or strings)
@@ -35,9 +37,11 @@ to_py_date <- function(x) {
 #'
 #' @return A character vector of ISO date strings.
 #' @examples
+#' \dontrun{
 #' # Example with mixed data types:
 #' clean_date(c("2025-04-23 00:00:00", ""))
-#' @export
+#' }
+#' @keywords internal
 clean_date <- function(column) {
   sapply(column, function(x) {
     if (inherits(x, "python.builtin.object")) {
@@ -53,3 +57,4 @@ clean_date <- function(column) {
     }
   }, USE.NAMES = FALSE)
 }
+

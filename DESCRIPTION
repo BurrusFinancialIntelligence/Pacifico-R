@@ -1,15 +1,26 @@
 Package: pacifico
 Type: Package
-Title: R Interface for the Pacifico Python Library
+Title: Interface for the 'Pacifico' Python Library
 Version: 0.1.0
-Author: Burrus Financial Intelligence, Ltda. (hereafter, BFI)
-Maintainer: Jacques Burrus <jacques.burrus@bfi.lat>
-Description: Provides an R wrapper for the Pacifico Python library, handling environment setup and date conversion automatically.
+Authors@R: c(person(given = c("Burrus", "Financial"),
+                      family = "Intelligence",
+                      role = "aut"),
+               person(given = "Jacques",
+                      family = "Burrus",
+                      role = "cre",
+                      email = "jacques.burrus@bfi.lat"))
+Description: Provides an interface to the 'Pacifico' Python library, allowing users to request financial
+    market data and convert date formats seamlessly between R and 'Python'. The package automates Python
+    environment setup through 'reticulate' and simplifies the process of working with the 'Pacifico' API
+    for economic research and analysis.
 Depends: R (>= 4.0)
-License: file LICENSE
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Imports: 
+Imports:
     reticulate
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

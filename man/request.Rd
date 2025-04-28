@@ -77,3 +77,15 @@ A cleaned dataframe with proper date formatting.
 \description{
 Request Data from Pacifico Python Library with Automatic Setup
 }
+\examples{
+\dontrun{
+# Example of requesting data from Pacifico:
+result <- request(
+  token = "your_api_token_here",
+  ticker = "CLP@TPM",
+  dateStart = as.Date("2025-04-20"),
+  dateEnd = as.Date("2025-04-23")
+)
+print(result)
+}
+}

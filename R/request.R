@@ -23,6 +23,17 @@
 #' @param format Output format (default 'dataFrame').
 #'
 #' @return A cleaned dataframe with proper date formatting.
+#' @examples
+#' \dontrun{
+#' # Example of requesting data from Pacifico:
+#' result <- request(
+#'   token = "your_api_token_here",
+#'   ticker = "CLP@TPM",
+#'   dateStart = as.Date("2025-04-20"),
+#'   dateEnd = as.Date("2025-04-23")
+#' )
+#' print(result)
+#' }
 #' @export
 request <- function(token = "",
                     ticker = "",
@@ -77,13 +88,20 @@ request <- function(token = "",
     format = format
   )
 
+  if (tolower(format) != "json") {
   # Clean date columns
   result$`Date Publication` <- clean_date(result$`Date Publication`)
   result$`Date Publication` <- as.POSIXct(result$`Date Publication`, format = "%Y-%m-%d %H:%M:%S")
   result$`Date Effective`   <- clean_date(result$`Date Effective`)
   result$`Date Effective`   <- as.POSIXct(result$`Date Effective`, format = "%Y-%m-%d %H:%M:%S")
   result$`Date Tenor`       <- clean_date(result$`Date Tenor`)
-  result$`Date Tenor`       <- as.POSIXct(result$`Date Tenor`, format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
+  if (grepl("T", result$`Date Tenor`[1])){
+    result$`Date Tenor`       <- as.POSIXct(result$`Date Tenor`, format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
+  }
+  else{
+    result$`Date Tenor`       <- as.POSIXct(result$`Date Tenor`, format = "%Y-%m-%d %H:%M:%S")
+  }
+  }
 
   return(result)
 }

@@ -2,14 +2,15 @@
 % Please edit documentation in R/setup.R
 \name{setup_pacifico_environment}
 \alias{setup_pacifico_environment}
-\title{Setup Pacifico Python Environment Safely}
+\title{Check Python environment and 'pacifico' availability}
 \usage{
 setup_pacifico_environment()
 }
 \value{
-A list with the imported \code{pacifico} and \code{datetime} Python modules.
+A list with the imported 'pacifico' and 'datetime' modules if available.
 }
 \description{
-This function checks for Miniconda, creates the \code{r-reticulate} environment if needed,
-installs the required Python package \code{pacifico}, and imports the necessary modules.
+Verifies if the Python environment and 'pacifico' package are available.
+Warns the user if setup is incomplete.
 }
+\keyword{internal}

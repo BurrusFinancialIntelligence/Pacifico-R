@@ -16,5 +16,9 @@ A Python \code{datetime.date} object.
 This function converts an R \code{Date}, \code{POSIXct}, or \code{POSIXlt} object into a Python \code{datetime.date} object.
 }
 \examples{
+\dontrun{
+# Example of converting an R Date to Python datetime.date:
 to_py_date(as.Date("2025-04-23"))
 }
+}
+\keyword{internal}
