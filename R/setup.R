@@ -48,7 +48,7 @@ install_pacifico_environment <- function() {
   # Install Miniconda if needed
   if (!dir.exists(reticulate::miniconda_path())) {
     message("Miniconda not found. Installing Miniconda...")
-    reticulate::install_miniconda(path = "C:/Miniconda3")
+    reticulate::install_miniconda()
   }
 
   # Create the environment if not present
