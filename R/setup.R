@@ -7,25 +7,25 @@
 #' @keywords internal
 setup_pacifico_environment <- function() {
   condaenv_name <- "r-reticulate"
-  install_pacifico_environment()
   # Check if Miniconda exists
   if (!dir.exists(reticulate::miniconda_path())) {
     warning("Miniconda not found. Please run install_pacifico_environment() first.")
+    install_pacifico_environment()
     return(invisible(NULL))
   }
 
   # Check if the environment exists
-  if (!(condaenv_name %in% reticulate::conda_list()$name)) {
-    warning("Conda environment 'r-reticulate' not found. Please run install_pacifico_environment().")
-    return(invisible(NULL))
-  }
+  #if (!(condaenv_name %in% reticulate::conda_list()$name)) {
+  #  warning("Conda environment 'r-reticulate' not found. Please run install_pacifico_environment().")
+  #  return(invisible(NULL))
+  #}
 
   # Activate and check if 'pacifico' is installed
-  reticulate::use_condaenv(condaenv_name, required = TRUE)
-  if (!"pacifico" %in% reticulate::py_list_packages()$package) {
-    warning("'pacifico' package not found. Please run install_pacifico_environment().")
-    return(invisible(NULL))
-  }
+  #reticulate::use_condaenv(condaenv_name, required = TRUE)
+  #if (!"pacifico" %in% reticulate::py_list_packages()$package) {
+  #  warning("'pacifico' package not found. Please run install_pacifico_environment().")
+  #  return(invisible(NULL))
+  #}
 
   # Load modules
   pacifico <- reticulate::import("pacifico")
@@ -63,8 +63,8 @@ install_pacifico_environment <- function() {
   packages <- reticulate::py_list_packages()$package
   if (!"pacifico" %in% packages) {
     message("Installing 'pacifico' Python package via pip...")
-    reticulate::py_install("pacifico", envname = condaenv_name, method = "pip", pip = TRUE)
+    reticulate::py_install("pacifico", envname = condaenv_name, pip = TRUE) #method = "pip",
   }
 
-  message("Environment setup complete.")
+  #message("Environment setup complete.")
 }
